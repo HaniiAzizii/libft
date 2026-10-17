@@ -1,22 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haazizi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/17 15:53:16 by haazizi           #+#    #+#             */
+/*   Updated: 2026/10/17 15:54:47 by haazizi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void ft_lstadd_back( t_list **lst, t_list *new)
+void	ft_lstadd_back( t_list **lst, t_list *new)
 {
-    t_list *current;
+	t_list	*current;
 
-    if (!lst || !new)
-        return;
-    if (*lst)
-    {
-        *lst = new;
-        return;
-    }
-    current = *lst;
-    while (current->next)
-        current = current->next;
-    current->next = new;
+	if (!lst || !new)
+		return ;
+	if (*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	current = *lst;
+	while (current->next)
+		current = current->next;
+	current->next = new;
 }
-
+/*
 #include <stdio.h>
 int main()
 {
@@ -31,4 +43,4 @@ int main()
     printf("Next node content: %s\n", (char *)head->next->content);
 
     return 0;
-}
+}*/

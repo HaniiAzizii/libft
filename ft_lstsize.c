@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: haazizi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/17 15:50:59 by haazizi           #+#    #+#             */
+/*   Updated: 2026/10/17 15:51:45 by haazizi          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-unsigned int ft_lstsize(t_list *lst)
+unsigned int	ft_lstsize(t_list *lst)
 {
-    unsigned int count;
+	unsigned int	count;
 
-    count = 0;
-    while (lst)
-    {
-        count++;
-        lst = lst->next;
-    }
-    return (count);
+	count = 0;
+	while (lst)
+	{
+		count++;
+		lst = lst->next;
+	}
+	return (count);
 }
-
+/*
 #include <stdio.h>
 int main()
 {
@@ -22,4 +34,4 @@ int main()
 
     printf("List size: %u\n", ft_lstsize(lst)); 
     return 0;
-}
+}*/

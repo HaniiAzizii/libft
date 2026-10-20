@@ -68,30 +68,21 @@ char    **ft_split(char const *s, char c)
         return (NULL);
      while (s[i])
         {
-            if (s[i] != c)
-            {
-                start = i;
-                while (s[i] && s[i] != c)
-                    i++;
-                result[j] = get_word(s, start, i);
-                if (!result[j])
-                {
-                    while (j > 0)
-                        free(result[--j]);
-                    free(result);
-                    return (NULL);
-                }
-                j++;
-            }
-            else
-                i++;
+           while (s[i] && s[i] == c)
+            i++;
+        start = i;
+        while (s[i] && s[i] != c)
+            i++;
+        if (i > start)
+        result[j++] = get_word(s, start, i);
         }
         result[j] = NULL;
         return (result);
 }
-//#include <stdio.h>
+/*
+#include <stdio.h>
 
-/*int main ()
+int main ()
 {
     char **result = ft_split("Hello 42 World", ' ');
     if (result)

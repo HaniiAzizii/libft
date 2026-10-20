@@ -1,0 +1,27 @@
+#include "libft.h"
+
+char *ft_strrchr(const char *s, int c)
+{
+    const char *last;
+
+    last = NULL;
+    while (*s)
+    {
+        if (*s == (char)c)
+            last = s;
+        s++;
+    }
+    if (c == '\0')
+        return ((char *)s);
+    return ((char *)last);
+}
+/*
+#include <stdio.h>
+int main()
+{
+    char *str = "Hello World";
+    printf("%s\n",ft_strrchr(str,'o'));
+    printf("%s\n",ft_strrchr(str,'\0'));
+    printf("%s",ft_strrchr(str,'z'));
+
+}*/

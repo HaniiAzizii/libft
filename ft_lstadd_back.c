@@ -6,7 +6,7 @@
 /*   By: haazizi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 15:53:16 by haazizi           #+#    #+#             */
-/*   Updated: 2026/10/17 15:54:47 by haazizi          ###   ########.fr       */
+/*   Updated: 2026/10/22 15:57:47 by haazizi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstadd_back( t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
-	if (*lst)
+	if (!*lst)
 	{
 		*lst = new;
 		return ;
